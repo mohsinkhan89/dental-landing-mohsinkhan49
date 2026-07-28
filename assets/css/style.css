@@ -305,6 +305,21 @@ select {
   font-size: 27px
 }
 
+.proof-icon--image {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.proof-icon--image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+
 .hero__proof b {
   color: var(--yellow);
   font-size: 17px;
@@ -2949,7 +2964,8 @@ body {
 
 .faq__intro {
   position: sticky;
-  top: 122px;
+  top: 142px;
+  align-self: start;
   padding: 28px;
   border: 1px solid rgba(219, 231, 242, .95);
   border-radius: 18px;
@@ -2994,14 +3010,14 @@ body {
   background: rgba(255, 255, 255, .96);
   box-shadow: 0 12px 30px rgba(16, 48, 82, .075);
   overflow: hidden;
-  transition: transform .25s, box-shadow .25s, border-color .25s
+  will-change: box-shadow, border-color;
+  transition: box-shadow .25s, border-color .25s
 }
 
 .faq-item:hover,
 .faq-item.active {
   border-color: rgba(8, 102, 207, .26);
-  box-shadow: 0 20px 45px rgba(16, 48, 82, .12);
-  transform: translateY(-2px)
+  box-shadow: 0 20px 45px rgba(16, 48, 82, .12)
 }
 
 .faq-item button {
@@ -3043,9 +3059,9 @@ body {
 }
 
 .faq-answer {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height .3s ease
+  transition: height .28s ease
 }
 
 .faq-answer p {
@@ -3054,10 +3070,6 @@ body {
   color: #53657a;
   font-size: 14px;
   line-height: 1.7
-}
-
-.faq-item.active .faq-answer {
-  max-height: 180px
 }
 
 @media(max-width:900px) {

@@ -35,7 +35,7 @@ document.querySelector('#save-form').addEventListener('submit', event => {
 });
 
 const animatedItems = document.querySelectorAll(
-  '.section-heading, .hero__microcards span, .service-card, .reviews article, .result-slider, .faq__intro, .faq-item, .trust__logos > div, .cta__inner, .save__inner'
+  '.section-heading, .hero__microcards span, .service-card, .reviews article, .result-slider, .faq-item, .trust__logos > div, .cta__inner, .save__inner'
 );
 animatedItems.forEach(item => item.classList.add('reveal'));
 
@@ -63,6 +63,13 @@ pageSections.forEach(section => {
   observer.observe(section);
 });
 
+const syncFaqHeights = () => {
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const answer = item.querySelector('.faq-answer');
+    answer.style.height = item.classList.contains('active') ? `${answer.scrollHeight}px` : '0px';
+  });
+};
+
 document.querySelectorAll('.faq-item button').forEach(button => {
   button.addEventListener('click', () => {
     const item = button.closest('.faq-item');
@@ -75,8 +82,11 @@ document.querySelectorAll('.faq-item button').forEach(button => {
       item.classList.add('active');
       button.setAttribute('aria-expanded', 'true');
     }
+    syncFaqHeights();
   });
 });
+syncFaqHeights();
+window.addEventListener('resize', syncFaqHeights);
 
 document.querySelectorAll('.result-slider').forEach(slider => {
   const beforeImage = slider.querySelector('.result-slider__before img');
