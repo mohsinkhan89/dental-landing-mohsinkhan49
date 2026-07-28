@@ -152,7 +152,7 @@ const reviewDots = document.querySelector('.review-dots');
 let reviewIndex = 0;
 let reviewTimer;
 
-const reviewsPerView = () => window.innerWidth <= 980 ? 1 : 3;
+const reviewsPerView = () => window.innerWidth <= 700 ? 1 : (window.innerWidth <= 980 ? 2 : 3);
 const maxReviewIndex = () => Math.max(0, reviewSlides.length - reviewsPerView());
 
 function renderReviewDots() {
@@ -210,3 +210,54 @@ window.addEventListener('resize', () => {
 renderReviewDots();
 moveReviews(0);
 startReviewAutoplay();
+
+// Turn the static card grids into swipeable carousels on tablet and mobile.
+document.querySelectorAll('.trust__logos, #services .cards, #results .results').forEach(track => {
+  const controls = document.createElement('div');
+  controls.className = 'responsive-slider-controls';
+  controls.innerHTML = `
+    <button type="button" class="responsive-slider-prev" aria-label="Previous cards">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div class="responsive-slider-dots" aria-hidden="true"></div>
+    <button type="button" class="responsive-slider-next" aria-label="Next cards">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>`;
+  track.insertAdjacentElement('afterend', controls);
+
+  const items = [...track.children];
+  const dots = controls.querySelector('.responsive-slider-dots');
+
+  const cardsPerView = () => window.innerWidth <= 700 ? 1 : 2;
+  const pageCount = () => Math.ceil(items.length / cardsPerView());
+  const pageWidth = () => track.clientWidth;
+
+  function renderDots() {
+    const count = pageCount();
+    if (dots.children.length === count) return;
+    dots.replaceChildren();
+    for (let index = 0; index < count; index += 1) {
+      const dot = document.createElement('span');
+      dots.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    renderDots();
+    const active = Math.min(
+      pageCount() - 1,
+      Math.round(track.scrollLeft / Math.max(1, pageWidth()))
+    );
+    [...dots.children].forEach((dot, index) => dot.classList.toggle('active', index === active));
+  }
+
+  controls.querySelector('.responsive-slider-prev').addEventListener('click', () => {
+    track.scrollBy({ left: -pageWidth(), behavior: 'smooth' });
+  });
+  controls.querySelector('.responsive-slider-next').addEventListener('click', () => {
+    track.scrollBy({ left: pageWidth(), behavior: 'smooth' });
+  });
+  track.addEventListener('scroll', updateDots, { passive: true });
+  window.addEventListener('resize', updateDots);
+  updateDots();
+});
