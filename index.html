@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BrightSmile Dental Clinic - modern, gentle dental care.">
+  <meta name="description" content="BrightSmile Dental Clinic — modern, gentle dental care in Melbourne.">
   <title>BrightSmile Dental Clinic</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,23 @@
 <body>
   <div class="topbar">
     <div class="container topbar__inner">
-      <span><i class="fa-regular fa-clock"></i>&nbsp; Open 7 Days a Week</span>
-      <span><i class="fa-solid fa-shield-heart"></i>&nbsp; Emergency Care Available</span>
-      <span class="topbar__phone"><i class="fa-solid fa-phone"></i>&nbsp; Call Us Now &nbsp; <strong>(03) 1234 5678</strong></span>
+      <span><i class="fa-regular fa-clock"></i> Open 7 Days a Week</span>
+      <span><i class="fa-solid fa-shield-heart"></i> Emergency Care Available</span>
+      <span class="topbar__phone"><i class="fa-solid fa-phone"></i> Call Us Now <strong>(03) 1234 5678</strong></span>
     </div>
   </div>
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="#">
+      <a class="brand" href="#" aria-label="BrightSmile home">
         <img class="brand__image" src="assets/images/logo/logo.png" alt="BrightSmile Dental Clinic">
       </a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-      <nav class="nav__links">
-        <a href="#services">Services</a><a href="#about">About Us</a>
-        <a href="#reviews">Reviews</a><a href="#results">Before &amp; After</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#results">Before &amp; After</a>
         <a href="#contact">Contact</a>
       </nav>
       <a class="button button--small" href="#booking">Book Appointment</a>
@@ -38,48 +40,51 @@
 
   <main>
     <section class="hero" id="about">
+      <div class="hero__photo" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__copy">
-          <div class="offer">✓ NEW PATIENT SPECIAL – Exam, X-ray &amp; Clean <b>ONLY $149</b></div>
+          <div class="offer"><i class="fa-solid fa-check"></i> New patient special — Exam, X-ray &amp; Clean <b>Only $149</b></div>
           <h1>Your Best Smile<br>Starts Here</h1>
           <p>Advanced care. Beautiful results.<br>A comfortable experience you deserve.</p>
           <ul class="checks">
-            <li>Gentle &amp; Experienced Dentists</li><li>Advanced Technology</li>
-            <li>Comfortable &amp; Relaxing Environment</li><li>Flexible Payment Options</li>
+            <li>Gentle &amp; Experienced Dentists</li>
+            <li>Advanced Technology</li>
+            <li>Comfortable &amp; Relaxing Environment</li>
+            <li>Flexible Payment Options</li>
           </ul>
           <div class="hero__proof">
-            <div><span class="proof-icon">G</span><b>★★★★★</b><small>4.9 Star Rating</small></div>
-            <div><span class="proof-icon">♢</span><strong>20+</strong><small>Years of Experience</small></div>
+            <div><span class="proof-icon"><i class="fa-brands fa-google"></i></span><b>★★★★★</b><small>4.9 Star Rating</small></div>
+            <div><span class="proof-icon"><i class="fa-solid fa-shield-heart"></i></span><strong>20+</strong><small>Years of Experience</small></div>
           </div>
         </div>
-        <div class="hero__photo" aria-label="Happy dental patient"></div>
+
         <form class="booking" id="booking">
           <h2>Book Your Appointment</h2>
           <p>It's quick, easy &amp; secure</p>
-          <label><span><i class="fa-regular fa-user"></i></span><input required placeholder="Full Name"></label>
-          <label><span><i class="fa-solid fa-phone"></i></span><input required type="tel" placeholder="Phone Number"></label>
-          <label><span><i class="fa-regular fa-envelope"></i></span><input required type="email" placeholder="Email Address"></label>
-          <label><span>♧</span><select required><option value="">Treatment Interest</option><option>Dental Implants</option><option>Invisalign</option><option>Cosmetic Dentistry</option></select></label>
-          <label><span><i class="fa-regular fa-calendar"></i></span><input required type="date" aria-label="Preferred date"></label>
-          <label><span><i class="fa-regular fa-clock"></i></span><select required><option value="">Preferred Time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
-          <button class="button" type="submit"><i class="fa-regular fa-calendar-check"></i> &nbsp; Book My Appointment</button>
-          <small>♙ &nbsp; Your information is 100% secure<br>and will never be shared.</small>
+          <label><i class="fa-regular fa-user"></i><input required name="name" placeholder="Full Name"></label>
+          <label><i class="fa-solid fa-phone"></i><input required name="phone" type="tel" placeholder="Phone Number"></label>
+          <label><i class="fa-regular fa-envelope"></i><input required name="email" type="email" placeholder="Email Address"></label>
+          <label><i class="fi fi-rr-tooth"></i><select required name="treatment"><option value="">Treatment Interest</option><option>Dental Implants</option><option>Invisalign</option><option>Cosmetic Dentistry</option></select></label>
+          <label><i class="fa-regular fa-calendar"></i><input required name="date" type="date" aria-label="Preferred date"></label>
+          <label><i class="fa-regular fa-clock"></i><select required name="time"><option value="">Preferred Time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+          <button class="button" type="submit"><i class="fa-regular fa-calendar-check"></i> Book My Appointment</button>
+          <small><i class="fa-solid fa-lock"></i> Your information is 100% secure<br>and will never be shared.</small>
         </form>
       </div>
     </section>
 
-    <section class="contact-strip">
+    <section class="contact-strip" aria-label="Clinic benefits">
       <div class="container strip-grid">
-        <div class="strip-call"><span><i class="fa-solid fa-phone-volume"></i></span><p><strong>(03) 1234 5678</strong><small>Prefer to talk? Call us now!</small></p></div>
-        <div class="strip-pill"><i class="fa-regular fa-clock"></i> <span><b>No Long Waits</b></span></div>
-        <div class="strip-pill"><i class="fa-regular fa-credit-card"></i> <span><b>Most Insurances</b><small>Accepted</small></span></div>
-        <div class="strip-pill"><i class="fa-solid fa-people-group"></i> <span><b>HICAPS</b><small>On-the-Spot Claims</small></span></div>
+        <div class="strip-call"><i class="fa-solid fa-phone-volume"></i><p><strong>(03) 1234 5678</strong><small>Prefer to talk? Call us now!</small></p></div>
+        <div class="strip-pill"><i class="fa-regular fa-clock"></i><span><b>No Long Waits</b></span></div>
+        <div class="strip-pill"><i class="fa-regular fa-credit-card"></i><span><b>Most Insurances</b><small>Accepted</small></span></div>
+        <div class="strip-pill"><i class="fa-solid fa-people-group"></i><span><b>HICAPS</b><small>On-the-Spot Claims</small></span></div>
       </div>
     </section>
 
     <section class="trust">
       <div class="container">
-        <p class="eyebrow">TRUSTED BY HUNDREDS OF HAPPY PATIENTS</p>
+        <p class="eyebrow">Trusted by hundreds of happy patients</p>
         <div class="trust__logos">
           <div><img src="assets/images/trusted/01_ADA_Australian_Dental_Association_3000px.png" alt="Australian Dental Association"></div>
           <div><img src="assets/images/trusted/02_Google_4.9_Rating_3000px.png" alt="Google 4.9 rating"></div>
@@ -91,37 +96,44 @@
 
     <section class="section" id="services">
       <div class="container">
-        <div class="section-heading"><span>OUR CORE SERVICES</span><h2>Complete Care for a Healthy, Beautiful Smile</h2><p>From preventive care to smile makeovers — we've got you covered.</p></div>
+        <div class="section-heading">
+          <span>Our Core Services</span>
+          <h2>Complete Care for a Healthy, Beautiful Smile</h2>
+          <p>From preventive care to smile makeovers — we've got you covered.</p>
+        </div>
         <div class="cards">
           <article class="service-card">
-            <div class="service-card__image"><img src="assets/images/core-service/dental-implants.png" alt="Dental implant"></div><span class="service-icon"><i class="fi fi-rr-tooth"></i></span>
-            <div class="service-card__body"><h3>Dental Implants</h3><p>Replace missing teeth with strong, natural-looking implants that last a lifetime.</p><a href="#">Learn More &nbsp;→</a></div>
+            <div class="service-card__image"><img src="assets/images/core-service/dental-implants.png" alt="Dental implant"></div>
+            <span class="service-icon"><i class="fi fi-rr-tooth"></i></span>
+            <div class="service-card__body"><h3>Dental Implants</h3><p>Replace missing teeth with strong, natural-looking implants that last a lifetime.</p><a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a></div>
           </article>
           <article class="service-card">
-            <div class="service-card__image"><img src="assets/images/core-service/invisalign.png" alt="Invisalign clear aligner"></div><span class="service-icon"><i class="fi fi-rr-apps"></i></span>
-            <div class="service-card__body"><h3>Invisalign®</h3><p>Straighten your teeth discreetly and comfortably with custom-made clear aligners.</p><a href="#">Learn More &nbsp;→</a></div>
+            <div class="service-card__image"><img src="assets/images/core-service/invisalign.png" alt="Invisalign clear aligner"></div>
+            <span class="service-icon"><i class="fi fi-rr-apps"></i></span>
+            <div class="service-card__body"><h3>Invisalign®</h3><p>Straighten your teeth discreetly and comfortably with custom-made clear aligners.</p><a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a></div>
           </article>
           <article class="service-card">
-            <div class="service-card__image"><img src="assets/images/core-service/cosmetic-dentistry.png" alt="Cosmetic dentistry smile"></div><span class="service-icon"><i class="fi fi-rr-sparkles"></i></span>
-            <div class="service-card__body"><h3>Cosmetic Dentistry</h3><p>Enhance your smile with whitening, veneers, bonding &amp; more for a confident you.</p><a href="#">Learn More &nbsp;→</a></div>
+            <div class="service-card__image"><img src="assets/images/core-service/cosmetic-dentistry.png" alt="Cosmetic dentistry smile"></div>
+            <span class="service-icon"><i class="fi fi-rr-sparkles"></i></span>
+            <div class="service-card__body"><h3>Cosmetic Dentistry</h3><p>Enhance your smile with whitening, veneers, bonding and more for a confident you.</p><a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight" id="reviews">
+    <section class="section section--soft" id="reviews">
       <div class="container">
-        <div class="section-heading"><span>REAL PATIENTS. REAL SMILES.</span><h2>What Our Patients Say</h2></div>
+        <div class="section-heading"><span>Real Patients. Real Smiles.</span><h2>What Our Patients Say</h2></div>
         <div class="reviews-shell">
           <button class="review-arrow review-arrow--prev" type="button" aria-label="Previous reviews"><i class="fa-solid fa-chevron-left"></i></button>
           <div class="reviews-viewport">
             <div class="reviews">
-              <article><img class="avatar" src="assets/images/reviews/sarah.jpg" alt="Sarah"><div><b>★★★★★</b><p>“The team at BrightSmile made me feel so comfortable. My implant looks and feels amazing!”</p><small>— Sarah T.</small></div></article>
+              <article><img class="avatar" src="assets/images/reviews/sarah.jpg" alt="Sarah"><div><b>★★★★★</b><p>“The team made me feel so comfortable. My implant looks and feels amazing!”</p><small>— Sarah T.</small></div></article>
               <article><img class="avatar" src="assets/images/reviews/james.jpg" alt="James"><div><b>★★★★★</b><p>“Invisalign changed my life. No one even noticed I was straightening my teeth!”</p><small>— James R.</small></div></article>
               <article><img class="avatar" src="assets/images/reviews/priya.jpg" alt="Priya"><div><b>★★★★★</b><p>“I love my new smile! The whitening results are incredible.”</p><small>— Priya M.</small></div></article>
-              <article><img class="avatar" src="assets/images/reviews/sarah.jpg" alt="Emma"><div><b>★★★★★</b><p>“Professional, gentle and friendly from start to finish. I finally enjoy visiting the dentist.”</p><small>— Emma L.</small></div></article>
-              <article><img class="avatar" src="assets/images/reviews/james.jpg" alt="Daniel"><div><b>★★★★★</b><p>“The whole process was explained clearly and my results exceeded every expectation.”</p><small>— Daniel K.</small></div></article>
-              <article><img class="avatar" src="assets/images/reviews/priya.jpg" alt="Sophia"><div><b>★★★★★</b><p>“A beautiful clinic and an amazing team. I cannot stop smiling after my treatment.”</p><small>— Sophia M.</small></div></article>
+              <article><img class="avatar" src="assets/images/reviews/sarah.jpg" alt="Emma"><div><b>★★★★★</b><p>“Professional, gentle and friendly from start to finish.”</p><small>— Emma L.</small></div></article>
+              <article><img class="avatar" src="assets/images/reviews/james.jpg" alt="Daniel"><div><b>★★★★★</b><p>“My results exceeded every expectation. I highly recommend BrightSmile.”</p><small>— Daniel K.</small></div></article>
+              <article><img class="avatar" src="assets/images/reviews/priya.jpg" alt="Sophia"><div><b>★★★★★</b><p>“A beautiful clinic and an amazing team. I cannot stop smiling.”</p><small>— Sophia M.</small></div></article>
             </div>
           </div>
           <button class="review-arrow review-arrow--next" type="button" aria-label="Next reviews"><i class="fa-solid fa-chevron-right"></i></button>
@@ -130,40 +142,29 @@
       </div>
     </section>
 
-    <section class="section section--results" id="results">
+    <section class="section" id="results">
       <div class="container">
-        <div class="section-heading"><span>SMILE TRANSFORMATIONS</span><h2>Before &amp; After Results</h2></div>
+        <div class="section-heading"><span>Smile Transformations</span><h2>Before &amp; After Results</h2></div>
         <div class="results">
-          <div class="result-slider" style="--position:50%">
-            <img class="result-slider__after" src="assets/images/result/smile-1-after.png" alt="Smile after treatment">
-            <div class="result-slider__before"><img src="assets/images/result/smile-1-before.png" alt="Smile before treatment"></div>
-            <span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span>
-            <button class="result-handle" type="button" aria-label="Move before and after comparison"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-          <div class="result-slider" style="--position:50%">
-            <img class="result-slider__after" src="assets/images/result/smile-2-after.png" alt="Smile after treatment">
-            <div class="result-slider__before"><img src="assets/images/result/smile-2-before.png" alt="Smile before treatment"></div>
-            <span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span>
-            <button class="result-handle" type="button" aria-label="Move before and after comparison"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-          <div class="result-slider" style="--position:50%">
-            <img class="result-slider__after" src="assets/images/result/smile-3-after.png" alt="Smile after treatment">
-            <div class="result-slider__before"><img src="assets/images/result/smile-3-before.png" alt="Smile before treatment"></div>
-            <span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span>
-            <button class="result-handle" type="button" aria-label="Move before and after comparison"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
+          <div class="result-slider" style="--position:50%"><img class="result-slider__after" src="assets/images/result/smile-1-after.png" alt="Smile after treatment"><div class="result-slider__before"><img src="assets/images/result/smile-1-before.png" alt="Smile before treatment"></div><span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span><button class="result-handle" type="button" aria-label="Move comparison"><i class="fa-solid fa-chevron-right"></i></button></div>
+          <div class="result-slider" style="--position:50%"><img class="result-slider__after" src="assets/images/result/smile-2-after.png" alt="Smile after treatment"><div class="result-slider__before"><img src="assets/images/result/smile-2-before.png" alt="Smile before treatment"></div><span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span><button class="result-handle" type="button" aria-label="Move comparison"><i class="fa-solid fa-chevron-right"></i></button></div>
+          <div class="result-slider" style="--position:50%"><img class="result-slider__after" src="assets/images/result/smile-3-after.png" alt="Smile after treatment"><div class="result-slider__before"><img src="assets/images/result/smile-3-before.png" alt="Smile before treatment"></div><span class="result-label result-label--before">Before</span><span class="result-label result-label--after">After</span><button class="result-handle" type="button" aria-label="Move comparison"><i class="fa-solid fa-chevron-right"></i></button></div>
         </div>
       </div>
     </section>
 
     <section class="cta">
-      <div class="container cta__inner"><div class="cta__icon"><i class="fi fi-rr-calendar-clock"></i></div><div class="cta__copy"><h2>Ready for Your Best Smile?</h2><p>Join hundreds of happy patients. Book your<br>appointment today and take the first step!</p></div><a class="button button--white" href="#booking">Book Now &nbsp; <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="container cta__inner">
+        <div class="cta__icon"><i class="fi fi-rr-calendar-clock"></i></div>
+        <div class="cta__copy"><h2>Ready for Your Best Smile?</h2><p>Join hundreds of happy patients. Book your appointment today and take the first step!</p></div>
+        <a class="button button--white" href="#booking">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </section>
 
     <section class="save">
       <div class="container save__inner">
         <div class="save__title"><span><i class="fi fi-rr-envelope"></i></span><strong>Changed your mind?<br>No problem.</strong></div>
-        <p>If you didn't complete your booking, we can help!<br>Enter your email and we'll save your details.</p>
+        <p>If you didn't complete your booking, we can help. Enter your email and we'll save your details.</p>
         <form id="save-form"><input type="email" required placeholder="Enter your email"><button class="button" type="submit">Save My Spot</button><small><i class="fa-solid fa-lock"></i> We respect your privacy. No spam, ever.</small></form>
       </div>
     </section>
@@ -171,14 +172,14 @@
 
   <footer class="footer" id="contact">
     <div class="container footer__grid">
-      <div><a class="footer-logo" href="#"><img src="assets/images/logo/logo-white.png" alt="BrightSmile Dental Clinic"></a><p>We provide gentle, high-quality dental care with advanced technology in a comfortable environment.</p><div class="socials"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Google"><i class="fa-brands fa-google"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      <div class="footer__about"><a class="footer-logo" href="#"><img src="assets/images/logo/logo-white.png" alt="BrightSmile Dental Clinic"></a><p>We provide gentle, high-quality dental care with advanced technology in a comfortable environment.</p><div class="socials"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Google"><i class="fa-brands fa-google"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
       <div><h3>Quick Links</h3><a href="#services">Services</a><a href="#about">About Us</a><a href="#reviews">Reviews</a><a href="#results">Before &amp; After</a><a href="#contact">Contact</a></div>
       <div><h3>Our Services</h3><a href="#">Dental Implants</a><a href="#">Invisalign®</a><a href="#">Cosmetic Dentistry</a><a href="#">General Dentistry</a><a href="#">Teeth Whitening</a><a href="#">Emergency Care</a></div>
       <div><h3>Contact Us</h3><ul class="contact-list"><li><i class="fa-solid fa-phone"></i><span>(03) 1234 5678</span></li><li><i class="fa-regular fa-envelope"></i><span>info@brightsmile.com.au</span></li><li><i class="fa-solid fa-location-dot"></i><span>123 Smile Street, Melbourne VIC 3000</span></li><li><i class="fa-regular fa-clock"></i><span>Open 7 Days a Week<br>8:00 AM – 8:00 PM</span></li></ul></div>
     </div>
     <div class="container footer__bottom"><span>© 2025 BrightSmile Dental Clinic. All Rights Reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></span></div>
   </footer>
-  <div class="toast" role="status">Thanks! Your request has been received.</div>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>
