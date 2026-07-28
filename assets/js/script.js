@@ -55,6 +55,25 @@ const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
 
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const hash = link.getAttribute('href');
+    if (!hash || hash === '#') return;
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    event.preventDefault();
+    const headerOffset = header.getBoundingClientRect().height + 16;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: 'smooth'
+    });
+  });
+});
+
 const pageSections = document.querySelectorAll(
   '.trust, #services, #reviews, #results, .cta, .save, .footer__grid'
 );
