@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BrightSmile Dental Clinic - modern, gentle dental care.">
+  <title>BrightSmile Dental Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="fa-regular fa-clock"></i>&nbsp; Open 7 Days a Week</span>
+      <span><i class="fa-solid fa-shield-heart"></i>&nbsp; Emergency Care Available</span>
+      <span class="topbar__phone"><i class="fa-solid fa-phone"></i>&nbsp; Call Us Now &nbsp; <strong>(03) 1234 5678</strong></span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img class="brand__image" src="assets/images/logo/logo.png" alt="BrightSmile Dental Clinic">
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <nav class="nav__links">
+        <a href="#services">Services</a><a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a><a href="#results">Before &amp; After</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button button--small" href="#booking">Book Appointment</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="offer">✓ NEW PATIENT SPECIAL – Exam, X-ray &amp; Clean <b>ONLY $149</b></div>
+          <h1>Your Best Smile<br>Starts Here</h1>
+          <p>Advanced care. Beautiful results.<br>A comfortable experience you deserve.</p>
+          <ul class="checks">
+            <li>Gentle &amp; Experienced Dentists</li><li>Advanced Technology</li>
+            <li>Comfortable &amp; Relaxing Environment</li><li>Flexible Payment Options</li>
+          </ul>
+          <div class="hero__proof">
+            <div><span class="proof-icon">G</span><b>★★★★★</b><small>4.9 Star Rating</small></div>
+            <div><span class="proof-icon">♢</span><strong>20+</strong><small>Years of Experience</small></div>
+          </div>
+        </div>
+        <div class="hero__photo" aria-label="Happy dental patient"></div>
+        <form class="booking" id="booking">
+          <h2>Book Your Appointment</h2>
+          <p>It's quick, easy &amp; secure</p>
+          <label><span><i class="fa-regular fa-user"></i></span><input required placeholder="Full Name"></label>
+          <label><span><i class="fa-solid fa-phone"></i></span><input required type="tel" placeholder="Phone Number"></label>
+          <label><span><i class="fa-regular fa-envelope"></i></span><input required type="email" placeholder="Email Address"></label>
+          <label><span>♧</span><select required><option value="">Treatment Interest</option><option>Dental Implants</option><option>Invisalign</option><option>Cosmetic Dentistry</option></select></label>
+          <label><span><i class="fa-regular fa-calendar"></i></span><input required type="date" aria-label="Preferred date"></label>
+          <label><span><i class="fa-regular fa-clock"></i></span><select required><option value="">Preferred Time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+          <button class="button" type="submit"><i class="fa-regular fa-calendar-check"></i> &nbsp; Book My Appointment</button>
+          <small>♙ &nbsp; Your information is 100% secure<br>and will never be shared.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-strip">
+      <div class="container strip-grid">
+        <div class="strip-call"><span><i class="fa-solid fa-phone-volume"></i></span><p><strong>(03) 1234 5678</strong><small>Prefer to talk? Call us now!</small></p></div>
+        <div class="strip-pill"><i class="fa-regular fa-clock"></i> <span><b>No Long Waits</b></span></div>
+        <div class="strip-pill"><i class="fa-regular fa-credit-card"></i> <span><b>Most Insurances</b><small>Accepted</small></span></div>
+        <div class="strip-pill"><i class="fa-solid fa-people-group"></i> <span><b>HICAPS</b><small>On-the-Spot Claims</small></span></div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <p class="eyebrow">TRUSTED BY HUNDREDS OF HAPPY PATIENTS</p>
+        <div class="trust__logos">
+          <div><img src="assets/images/trusted/01_ADA_Australian_Dental_Association_3000px.png" alt="Australian Dental Association"></div>
+          <div><img src="assets/images/trusted/02_Google_4.9_Rating_3000px.png" alt="Google 4.9 rating"></div>
+          <div><img src="assets/images/trusted/03_20_Plus_Years_Experience_3000px.png" alt="20 plus years of experience"></div>
+          <div><img src="assets/images/trusted/04_Invisalign_Provider_3000px.png" alt="Invisalign provider"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading"><span>OUR CORE SERVICES</span><h2>Complete Care for a Healthy, Beautiful Smile</h2><p>From preventive care to smile makeovers — we've got you covered.</p></div>
+        <div class="cards">
+          <article class="service-card">
+            <div class="service-card__image dental-image dental-image--implant"><span class="service-icon">♧</span></div>
+            <div class="service-card__body"><h3>Dental Implants</h3><p>Replace missing teeth with strong, natural-looking implants that last a lifetime.</p><a href="#">Learn More &nbsp;→</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__image dental-image dental-image--aligner"><span class="service-icon">▦</span></div>
+            <div class="service-card__body"><h3>Invisalign®</h3><p>Straighten your teeth discreetly and comfortably with custom-made clear aligners.</p><a href="#">Learn More &nbsp;→</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-card__image dental-image dental-image--smile"><span class="service-icon">✣</span></div>
+            <div class="service-card__body"><h3>Cosmetic Dentistry</h3><p>Enhance your smile with whitening, veneers, bonding &amp; more for a confident you.</p><a href="#">Learn More &nbsp;→</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="reviews">
+      <div class="container">
+        <div class="section-heading"><span>REAL PATIENTS. REAL SMILES.</span><h2>What Our Patients Say</h2></div>
+        <div class="reviews">
+          <article><div class="avatar avatar--one">S</div><div><b>★★★★★</b><p>“The team at BrightSmile made me feel so comfortable. My implant looks and feels amazing!”</p><small>— Sarah T.</small></div></article>
+          <article><div class="avatar avatar--two">J</div><div><b>★★★★★</b><p>“Invisalign changed my life. No one even noticed I was straightening my teeth!”</p><small>— James R.</small></div></article>
+          <article><div class="avatar avatar--three">P</div><div><b>★★★★★</b><p>“I love my new smile! The whitening results are incredible.”</p><small>— Priya M.</small></div></article>
+        </div>
+        <div class="dots"><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+    <section class="section section--results" id="results">
+      <div class="container">
+        <div class="section-heading"><span>SMILE TRANSFORMATIONS</span><h2>Before &amp; After Results</h2></div>
+        <div class="results">
+          <div class="result result--one"><span>Before</span><i>›</i><span>After</span></div>
+          <div class="result result--two"><span>Before</span><i>›</i><span>After</span></div>
+          <div class="result result--three"><span>Before</span><i>›</i><span>After</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner"><div class="cta__icon"><i class="fa-regular fa-calendar-check"></i></div><div><h2>Ready for Your Best Smile?</h2><p>Join hundreds of happy patients. Book your<br>appointment today and take the first step!</p></div><a class="button button--white" href="#booking">Book Now &nbsp; <i class="fa-solid fa-arrow-right"></i></a></div>
+    </section>
+
+    <section class="save">
+      <div class="container save__inner">
+        <div class="save__title"><span><i class="fa-regular fa-envelope"></i></span><strong>Changed your mind?<br>No problem.</strong></div>
+        <p>If you didn't complete your booking, we can help!<br>Enter your email and we'll save your details.</p>
+        <form id="save-form"><input type="email" required placeholder="Enter your email"><button class="button" type="submit">Save My Spot</button><small>♙ We respect your privacy. No spam, ever.</small></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div><a class="brand brand--light" href="#"><span class="brand__icon">♧</span><span><strong>BrightSmile</strong><small>DENTAL CLINIC</small></span></a><p>We provide gentle, high-quality dental care with advanced technology in a comfortable environment.</p><div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">G</a><a href="#">▶</a></div></div>
+      <div><h3>Quick Links</h3><a href="#services">Services</a><a href="#about">About Us</a><a href="#reviews">Reviews</a><a href="#results">Before &amp; After</a><a href="#contact">Contact</a></div>
+      <div><h3>Our Services</h3><a href="#">Dental Implants</a><a href="#">Invisalign®</a><a href="#">Cosmetic Dentistry</a><a href="#">General Dentistry</a><a href="#">Teeth Whitening</a><a href="#">Emergency Care</a></div>
+      <div><h3>Contact Us</h3><p>☎ &nbsp; (03) 1234 5678<br>✉ &nbsp; info@brightsmile.com.au<br>⌖ &nbsp; 123 Smile Street, Melbourne VIC 3000<br>◷ &nbsp; Open 7 Days a Week<br>&nbsp;&nbsp;&nbsp;&nbsp; 8:00 AM – 8:00 PM</p></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2025 BrightSmile Dental Clinic. All Rights Reserved.</span><span><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></span></div>
+  </footer>
+  <div class="toast" role="status">Thanks! Your request has been received.</div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
