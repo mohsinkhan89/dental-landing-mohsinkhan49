@@ -152,18 +152,25 @@ const reviewDots = document.querySelector('.review-dots');
 let reviewIndex = 0;
 let reviewTimer;
 
-const reviewsPerView = () => window.innerWidth <= 780 ? 1 : 3;
+const reviewsPerView = () => window.innerWidth <= 980 ? 1 : 3;
 const maxReviewIndex = () => Math.max(0, reviewSlides.length - reviewsPerView());
 
-reviewSlides.slice(0, maxReviewIndex() + 1).forEach((_, index) => {
-  const dot = document.createElement('button');
-  dot.type = 'button';
-  dot.setAttribute('aria-label', `Show review slide ${index + 1}`);
-  dot.addEventListener('click', () => moveReviews(index));
-  reviewDots.appendChild(dot);
-});
+function renderReviewDots() {
+  const dotsNeeded = maxReviewIndex() + 1;
+  if (reviewDots.children.length === dotsNeeded) return;
+
+  reviewDots.replaceChildren();
+  reviewSlides.slice(0, dotsNeeded).forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Show review slide ${index + 1}`);
+    dot.addEventListener('click', () => moveReviews(index));
+    reviewDots.appendChild(dot);
+  });
+}
 
 function moveReviews(index) {
+  renderReviewDots();
   reviewIndex = Math.max(0, Math.min(index, maxReviewIndex()));
   const gap = parseFloat(getComputedStyle(reviewTrack).gap) || 0;
   const slideWidth = reviewSlides[0].getBoundingClientRect().width + gap;
@@ -196,6 +203,10 @@ document.querySelector('.reviews-viewport').addEventListener('pointerup', event 
   if (Math.abs(distance) > 45) moveReviews(reviewIndex + (distance < 0 ? 1 : -1));
 });
 
-window.addEventListener('resize', () => moveReviews(reviewIndex));
+window.addEventListener('resize', () => {
+  renderReviewDots();
+  moveReviews(reviewIndex);
+});
+renderReviewDots();
 moveReviews(0);
 startReviewAutoplay();
