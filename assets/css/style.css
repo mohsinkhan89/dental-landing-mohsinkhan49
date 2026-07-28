@@ -326,6 +326,23 @@ select {
   height: 36px
 }
 
+.proof-icon--flat {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(8, 102, 207, .18);
+  border-radius: 50%;
+  color: #075fb8;
+  background: #eaf5ff;
+  font-size: 18px
+}
+
+.proof-icon--flat i {
+  display: flex;
+  line-height: 1
+}
+
 .hero__proof b {
   color: var(--yellow);
   font-size: 17px;
@@ -3011,6 +3028,7 @@ body {
 }
 
 .faq-item {
+  position: relative;
   border: 1px solid rgba(219, 231, 242, .95);
   border-radius: 16px;
   background: rgba(255, 255, 255, .96);
@@ -3024,6 +3042,23 @@ body {
 .faq-item.active {
   border-color: rgba(8, 102, 207, .26);
   box-shadow: 0 20px 45px rgba(16, 48, 82, .12)
+}
+
+.faq-item.active {
+  background:
+    linear-gradient(90deg, rgba(8, 102, 207, .11), rgba(255, 255, 255, .97) 36%),
+    #fff
+}
+
+.faq-item.active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(180deg, #0b7ff0, #0758b9)
 }
 
 .faq-item button {
@@ -3045,6 +3080,10 @@ body {
   font-size: 16px;
   font-weight: 800;
   line-height: 1.35
+}
+
+.faq-item.active button span {
+  color: #0758b9
 }
 
 .faq-item button i {
