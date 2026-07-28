@@ -35,7 +35,7 @@ document.querySelector('#save-form').addEventListener('submit', event => {
 });
 
 const animatedItems = document.querySelectorAll(
-  '.section-heading, .hero__microcards span, .service-card, .reviews article, .result-slider, .trust__logos > div, .cta__inner, .save__inner'
+  '.section-heading, .hero__microcards span, .service-card, .reviews article, .result-slider, .faq__intro, .faq-item, .trust__logos > div, .cta__inner, .save__inner'
 );
 animatedItems.forEach(item => item.classList.add('reveal'));
 
@@ -61,6 +61,21 @@ const pageSections = document.querySelectorAll(
 pageSections.forEach(section => {
   section.classList.add('page-reveal');
   observer.observe(section);
+});
+
+document.querySelectorAll('.faq-item button').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.closest('.faq-item');
+    const open = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(faq => {
+      faq.classList.remove('active');
+      faq.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+    if (!open) {
+      item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
 });
 
 document.querySelectorAll('.result-slider').forEach(slider => {
