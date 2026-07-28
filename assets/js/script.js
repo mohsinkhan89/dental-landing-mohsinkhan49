@@ -35,7 +35,7 @@ document.querySelector('#save-form').addEventListener('submit', event => {
 });
 
 const animatedItems = document.querySelectorAll(
-  '.section-heading, .service-card, .reviews article, .result, .trust__logos > div, .save__inner'
+  '.section-heading, .hero__microcards span, .service-card, .reviews article, .result-slider, .trust__logos > div, .cta__inner, .save__inner'
 );
 animatedItems.forEach(item => item.classList.add('reveal'));
 
