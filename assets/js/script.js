@@ -121,7 +121,8 @@ reviewSlides.slice(0, maxReviewIndex() + 1).forEach((_, index) => {
 
 function moveReviews(index) {
   reviewIndex = Math.max(0, Math.min(index, maxReviewIndex()));
-  const slideWidth = reviewSlides[0].getBoundingClientRect().width + 28;
+  const gap = parseFloat(getComputedStyle(reviewTrack).gap) || 0;
+  const slideWidth = reviewSlides[0].getBoundingClientRect().width + gap;
   reviewTrack.style.transform = `translateX(-${reviewIndex * slideWidth}px)`;
   [...reviewDots.children].forEach((dot, i) => dot.classList.toggle('active', i === reviewIndex));
 }

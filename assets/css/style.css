@@ -2539,3 +2539,191 @@ body {
     text-align: center
   }
 }
+
+/* Modern reviews */
+#reviews {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(8, 102, 207, .08), transparent 28%),
+    radial-gradient(circle at 88% 22%, rgba(108, 188, 255, .12), transparent 26%),
+    linear-gradient(180deg, #fbfdff 0%, #f4f9ff 100%)
+}
+
+#reviews:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(8, 102, 207, .035) 0 1px, transparent 1px 20px);
+  pointer-events: none
+}
+
+#reviews .container {
+  position: relative;
+  z-index: 1
+}
+
+.reviews-shell {
+  max-width: 1060px;
+  margin-top: 28px
+}
+
+.reviews-viewport {
+  padding: 10px 4px 22px
+}
+
+.reviews article {
+  min-height: 202px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 22px;
+  border: 1px solid rgba(219, 231, 242, .95);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(255, 255, 255, .92));
+  box-shadow: 0 18px 42px rgba(16, 48, 82, .1);
+  backdrop-filter: blur(8px)
+}
+
+.reviews article:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0b7ff0, #8fd0ff);
+  opacity: 0;
+  transition: opacity .25s
+}
+
+.reviews article:hover {
+  border-color: rgba(8, 102, 207, .24);
+  transform: translateY(-8px);
+  box-shadow: 0 28px 58px rgba(16, 48, 82, .18)
+}
+
+.reviews article:hover:after {
+  opacity: 1
+}
+
+.reviews article:before {
+  right: 20px;
+  top: 8px;
+  color: rgba(8, 102, 207, .09);
+  font-size: 66px
+}
+
+.avatar {
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 26px rgba(10, 40, 80, .18)
+}
+
+.reviews .stars {
+  display: inline-flex;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: var(--yellow);
+  background: #fff8db;
+  box-shadow: inset 0 0 0 1px rgba(248, 185, 0, .22);
+  font-size: 13px;
+  letter-spacing: 1px
+}
+
+.reviews p {
+  margin: 0 0 14px;
+  color: #3f5064;
+  font-size: 14px;
+  line-height: 1.7
+}
+
+.reviews small {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  color: var(--muted);
+  font-size: 12px
+}
+
+.reviews small strong {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800
+}
+
+.reviews small span {
+  color: #0b68c5;
+  font-size: 11px;
+  font-weight: 700
+}
+
+.review-arrow {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #fff;
+  color: #fff;
+  background: linear-gradient(135deg, #0b7ff0, #0758b9);
+  box-shadow: 0 16px 32px rgba(6, 72, 140, .25);
+  opacity: 1
+}
+
+.review-arrow:hover {
+  scale: 1.08;
+  box-shadow: 0 22px 42px rgba(6, 72, 140, .32)
+}
+
+.review-arrow--prev {
+  left: -22px
+}
+
+.review-arrow--next {
+  right: -22px
+}
+
+.review-dots {
+  margin-top: 2px
+}
+
+.review-dots button {
+  width: 9px;
+  height: 9px;
+  background: #c6d8ea
+}
+
+.review-dots button.active {
+  width: 28px;
+  background: linear-gradient(90deg, #0b7ff0, #0758b9)
+}
+
+@media(max-width:780px) {
+  .reviews article {
+    min-height: auto
+  }
+
+  .review-arrow--prev {
+    left: -10px
+  }
+
+  .review-arrow--next {
+    right: -10px
+  }
+}
+
+@media(max-width:480px) {
+  .reviews article {
+    display: block;
+    text-align: center
+  }
+
+  .avatar {
+    margin: 0 auto 12px
+  }
+
+  .reviews small {
+    align-items: center
+  }
+}
