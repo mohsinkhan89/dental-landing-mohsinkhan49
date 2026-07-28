@@ -213,9 +213,9 @@ select {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: linear-gradient(90deg, rgba(247, 250, 252, .98) 0%, rgba(247, 250, 252, .92) 28%, rgba(247, 250, 252, .25) 46%, rgba(247, 250, 252, 0) 72%), url(../images/hero/hero-img.png);
-  background-size: auto 680px;
-  background-position: 55% center;
+  background-image: linear-gradient(90deg, rgba(247, 250, 252, .98) 0%, rgba(247, 250, 252, .9) 27%, rgba(247, 250, 252, .32) 43%, rgba(247, 250, 252, 0) 68%), url(../images/hero/hero-img.png);
+  background-size: cover;
+  background-position: center 43%;
   background-repeat: no-repeat
 }
 
@@ -223,7 +223,8 @@ select {
   position: relative;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 300px
+  grid-template-columns: 1fr 340px;
+  column-gap: 46px
 }
 
 .hero__copy {
@@ -320,6 +321,8 @@ select {
 
 .booking {
   align-self: start;
+  justify-self: end;
+  width: 300px;
   margin-top: 42px;
   padding: 23px 21px 17px;
   border-radius: 8px;
@@ -1247,7 +1250,7 @@ select {
   }
 
   .hero__grid {
-    grid-template-columns: 1fr 280px
+    grid-template-columns: 1fr 300px
   }
 
   .save__inner {
@@ -1307,8 +1310,8 @@ select {
   .hero__photo {
     height: 470px;
     background-image: linear-gradient(90deg, rgba(247, 250, 252, .93), rgba(247, 250, 252, .3)), url(../images/hero/hero-img.png);
-    background-size: auto 530px;
-    background-position: 57% center
+    background-size: cover;
+    background-position: 56% center
   }
 
   .hero__grid {
